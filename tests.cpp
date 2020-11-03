@@ -12,7 +12,7 @@ TEST(general_test, second) {
     std::string u= "ababacbababbcaaa";
     std::string regexp = "ac+b.*ab+c..";
     Regexp parser(u, regexp);
-    EXPECT_EQ(parser.GetMaxSubstrLength(), 2);
+    EXPECT_EQ(parser.GetMaxSubstrLength(), 8);
 }
 
 TEST(general_test, third) {
@@ -32,14 +32,14 @@ TEST(error_test, first) {
     std::string u= "abbababbabaa";
     std::string regexp = "acb..bab.c.*.ab.ba.+.+*a";
     Regexp parser(u, regexp);
-    EXPECT_EQ(parser.GetMaxSubstrLength(), "ERROR");
+    EXPECT_EQ(parser.GetInCorrection(), true);
 }
 
 TEST(error_test, second) {
     std::string u= "bbcababaa";
     std::string regexp = "ab+cc..a.bb";
     Regexp parser(u, regexp);
-    EXPECT_EQ(parser.GetMaxSubstrLength(), "ERROR");
+    EXPECT_EQ(parser.GetInCorrection(), true);
 }
 int main(int argc, char **argv) {
   testing::InitGoogleTest(&argc, argv);
