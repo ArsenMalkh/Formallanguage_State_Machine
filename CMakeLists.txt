@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3)
+cmake_minimum_required(VERSION 3.1)
 project(FormalPrac)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -21,6 +21,6 @@ install (
 )
 
 install (
-        TARGETS practicum
+        TARGETS FormalPrac
         RUNTIME DESTINATION ${PROJECT_SOURCE_DIR}/bin
 )
