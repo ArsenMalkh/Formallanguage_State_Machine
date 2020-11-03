@@ -19,6 +19,6 @@ private:
 public:
     Regexp(const std::string &str, const std::string& rpn);
     int GetMaxSubstrLength() const;
-    bool GetCorrection() const;
+    bool GetInCorrection() const;
 
 };
