@@ -35,7 +35,7 @@ TEST(error_test, first) {
     EXPECT_EQ(parser.GetMaxSubstrLength(), "ERROR");
 }
 
-TEST(general_tests, second) {
+TEST(error_test, second) {
     std::string u= "bbcababaa";
     std::string regexp = "ab+cc..a.bb";
     Regexp parser(u, regexp);
