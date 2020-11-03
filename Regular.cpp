@@ -5,11 +5,11 @@ Regexp::Regexp(const std::string &str, const std::string &rpn) : str(str), reg_r
 	incorrect = false;
 	symbols.insert('.');
 	symbols.insert('*');
-	symbols.insert('+');
-    Create();
-    if (regular_exp.size() != 1 || substr_sets.top().empty()) {
+    	symbols.insert('+');
+    	Create();
+    	if (regular_exp.size() != 1 || substr_sets.top().empty()) {
         incorrect = true;
-    }
+    	}
 }
 bool Regexp::GetCorrection() const {
 	return incorrect;
