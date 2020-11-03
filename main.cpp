@@ -6,7 +6,7 @@ int main() {
     std::string regexp;
     std::cin>>regexp>>u;
     Regexp parser(u, regexp);
-	if(!parser.GetCorrection())
+	if(!parser.GetInCorrection())
     std::cout<<parser.GetMaxSubstrLength();
 	else
 		std::cout<<"ERROR"<<std::endl;
