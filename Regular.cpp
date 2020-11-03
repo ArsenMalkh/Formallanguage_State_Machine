@@ -11,7 +11,7 @@ Regexp::Regexp(const std::string &str, const std::string &rpn) : str(str), reg_r
         incorrect = true;
     	}
 }
-bool Regexp::GetCorrection() const {
+bool Regexp::GetInCorrection() const {
 	return incorrect;
 }
 
