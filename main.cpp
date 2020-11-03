@@ -10,6 +10,5 @@ int main() {
     std::cout<<parser.GetMaxSubstrLength();
 	else
 		std::cout<<"ERROR"<<std::endl;
-	system("pause");
 	return 0;
 }
