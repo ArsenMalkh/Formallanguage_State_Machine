@@ -7,7 +7,7 @@ Regexp::Regexp(const std::string &str, const std::string &rpn) : str(str), reg_r
 	symbols.insert('*');
     	symbols.insert('+');
     	Create();
-    	if (regular_exp.size() != 1 || substr_sets.top().empty()) {
+    	if (regular_exp.size() != 1) {
         incorrect = true;
     	}
 }
