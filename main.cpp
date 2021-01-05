@@ -8,7 +8,7 @@ int main() {
     getline(std::cin, u);
     Regexp parser(u, regexp);
 	if(!parser.GetInCorrection())
-    std::cout<<parser.GetMaxSubstrLength();
+    std::cout<<std::max(parser.GetMaxSubstrLength(), 0);
 	else
 		std::cout<<"ERROR"<<std::endl;
 	return 0;
