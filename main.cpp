@@ -4,7 +4,8 @@
 int main() {
     std::string u;
     std::string regexp;
-    std::cin>>regexp>>u;
+    getline(std::cin, regexp);
+    getline(std::cin, u);
     Regexp parser(u, regexp);
 	if(!parser.GetInCorrection())
     std::cout<<parser.GetMaxSubstrLength();
