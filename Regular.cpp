@@ -82,7 +82,7 @@ void Regexp::Create() {
 			else if(elem == '*'){
                 regular_exp.top().insert(0, "(");
                 regular_exp.top() += ")*";
-                for (size_t i = 0; i < str.size(); ++i) {
+                for (size_t i = 0; i <= str.size(); ++i) {
                     substr_sets.top().emplace(i, i); /* empty substrings are fine too */
                 }
 
