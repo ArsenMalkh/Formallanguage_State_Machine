@@ -38,6 +38,9 @@ void Regexp::Create() {
                 if (str[i] == elem) {
                     substr_sets.top().emplace(i, i + 1);
                 }
+                if (elem == '1') {
+                    substr_sets.top().emplace(i, i);
+                }
             }
         } else {
             if (symbols.find(elem) == symbols.end() || ((elem == '+' || elem == '.') && regular_exp.size() < 2) || (elem == '*' && regular_exp.empty())) {
