@@ -40,6 +40,9 @@ void Regexp::Create() {
                 }
                 if (elem == '1') {
                     substr_sets.top().emplace(i, i);
+		    if(i == str.size() - 1) {
+			substr_sets.top().emplace(i + 1, i + 1);
+	            }
                 }
             }
         } else {
